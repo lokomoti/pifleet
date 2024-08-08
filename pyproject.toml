@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "pifleet"
+version = "0.1.0"
+description = "Raspberry Pi fleet management API"
+authors = ["Jakub Nedoma, nedoma.jakub@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+sqlalchemy = "^2.0.31"
+loguru = "^0.7.2"
+fastapi = "^0.111.1"
+pydantic-settings = "^2.3.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+line-length = 79
+fix = true
+lint.select = ["E", "F", "W", "C", "N", "Q", "B"]
+lint.ignore = ["B008", "N805"]
+exclude = [
+    ".git",
+    "__pycache__",
+    "build",
+    "dist"
+]
